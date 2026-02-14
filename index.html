@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Amor a Distancia 💕</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-pink-100 via-red-50 to-purple-100 min-h-screen overflow-x-hidden">
+
+    <!-- Floating Hearts Container -->
+    <div id="hearts-container" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative z-10 min-h-[90vh] flex items-center justify-center px-4">
+        <div class="text-center max-w-4xl mx-auto">
+            <div class="mb-8 relative inline-block">
+                <div class="absolute -inset-4 bg-red-200 rounded-full blur-2xl opacity-50 animate-pulse"></div>
+                <img src="marie.jpg" alt="Nosotros" class="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-white shadow-2xl mx-auto transform hover:scale-105 transition duration-500">
+                <div class="absolute -bottom-2 -right-2 bg-red-500 text-white p-3 rounded-full shadow-lg animate-bounce">
+                    <i data-lucide="heart" class="w-6 h-6 fill-white"></i>
+                </div>
+            </div>
+            
+            <h1 class="font-['Dancing_Script'] text-5xl md:text-7xl text-red-600 mb-4 drop-shadow-sm">
+                A Kilómetros de Distancia...
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-2 font-light">
+                Pero siempre juntos en el corazón
+            </p>
+            
+            
+            <div class="mt-8 flex gap-4 justify-center">
+                <button onclick="sendVirtualHug()" class="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full shadow-lg transform hover:scale-105 transition flex items-center gap-2">
+                    <i data-lucide="armchair"></i>
+                    Enviar Abrazo Virtual
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distance & Time Section -->
+    <section id="tiempo" class="relative z-10 py-20 px-4 bg-white/60 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-['Dancing_Script'] text-4xl md:text-5xl text-center text-red-600 mb-12">Nuestra Distancia</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Distance Card -->
+                <div class="bg-white rounded-2xl shadow-xl p-6 text-center transform hover:-translate-y-2 transition duration-300 border-2 border-pink-100">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="map-pin" class="text-red-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-gray-500 text-sm uppercase tracking-wide mb-1">Kilómetros de Distancia</h3>
+                    <p class="text-3xl font-bold text-gray-800 mb-2" id="distance-km">70.6</p>
+                    <p class="text-sm text-gray-600">Cada kilómetro nos acerca más al reencuentro</p>
+                </div>
+
+                <!-- Countdown Card -->
+                <div class="bg-white rounded-2xl shadow-xl p-6 text-center transform hover:-translate-y-2 transition duration-300 border-2 border-pink-100">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="calendar-heart" class="text-pink-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-gray-500 text-sm uppercase tracking-wide mb-1">Días para Verte</h3>
+                    <div class="grid grid-cols-4 gap-2 mt-4 text-center">
+                        <div>
+                            <span id="days" class="block text-2xl font-bold text-red-600">00</span>
+                            <span class="text-xs text-gray-500">Días</span>
+                        </div>
+                        <div>
+                            <span id="hours" class="block text-2xl font-bold text-red-600">00</span>
+                            <span class="text-xs text-gray-500">Horas</span>
+                        </div>
+                        <div>
+                            <span id="minutes" class="block text-2xl font-bold text-red-600">00</span>
+                            <span class="text-xs text-gray-500">Min</span>
+                        </div>
+                        <div>
+                            <span id="seconds" class="block text-2xl font-bold text-red-600">00</span>
+                            <span class="text-xs text-gray-500">Seg</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Love Letter Section -->
+    <section id="carta" class="relative z-10 py-20 px-4 bg-white/80 backdrop-blur-sm">
+        <div class="max-w-3xl mx-auto">
+            <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-3xl shadow-2xl p-8 md:p-12 border border-red-100 relative overflow-hidden">
+                <!-- Decorative elements -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-red-200 rounded-full blur-3xl opacity-30 -mr-16 -mt-16"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-pink-200 rounded-full blur-3xl opacity-30 -ml-16 -mb-16"></div>
+                
+                <div class="relative z-10">
+                    <div class="text-center mb-8">
+                        <i data-lucide="heart" class="w-12 h-12 text-red-500 mx-auto mb-4 fill-red-100"></i>
+                        <h2 class="font-['Dancing_Script'] text-4xl text-red-600 mb-2">Mi Carta de Amor</h2>
+                        <p class="text-gray-500 text-sm">Para leer en esos días difíciles</p>
+                    </div>
+                    
+                    <div class="prose prose-lg mx-auto text-gray-700 leading-relaxed space-y-4" id="love-letter">
+                        <p class="first-letter:text-5xl first-letter:font-['Dancing_Script'] first-letter:text-red-500 first-letter:mr-2">
+                            Marie, mi amor,
+                        </p>
+                        <p class="typewriter-text">
+                            Aunque la distancia nos separe físicamente, cada día mi corazón late más fuerte pensando en ti. 
+                        </p>
+                        <p class="typewriter-text">
+                            Sé que no es fácil, que hay noches en las que desearía simplemente abrazarte antes de dormir, o mañanas en las que quisiera despertarte con un beso. Pero cada segundo de espera valdrá la pena.
+                        </p>
+                        <p class="typewriter-text">
+                            Eres mi persona favorita, mi apoyo incondicional y mi sueño hecho realidad. Gracias por amarme a pesar de los kilómetros, por la paciencia, por cada mensaje de "buenos días".
+                        </p>
+                        <p class="typewriter-text font-['Dancing_Script'] text-2xl text-red-600 mt-6">
+                            Te amo más allá del corazon. Siempre tuyo.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 pt-8 border-t border-red-200 text-center">
+                        <button onclick="playLoveSong()" class="text-red-500 hover:text-red-600 flex items-center gap-2 mx-auto transition">
+                            <i data-lucide="music" class="animate-spin-slow"></i>
+                            <span class="text-sm">Nuestra canción</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Actions -->
+    <section class="relative z-10 py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-['Dancing_Script'] text-4xl text-red-600 mb-8">¿Qué necesitas hoy?</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <button onclick="sendKiss()" class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 border-2 border-transparent hover:border-pink-200">
+                    <div class="text-4xl mb-3 group-hover:scale-125 transition">💋</div>
+                    <h3 class="font-semibold text-gray-800">Beso Virtual</h3>
+                    <p class="text-sm text-gray-500 mt-2">Un beso a través de la pantalla</p>
+                </button>
+                
+                <button onclick="sendMemory()" class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 border-2 border-transparent hover:border-red-200">
+                    <div class="text-4xl mb-3 group-hover:scale-125 transition">📸</div>
+                    <h3 class="font-semibold text-gray-800">Recuerdo Especial</h3>
+                    <p class="text-sm text-gray-500 mt-2">Revivir un momento juntos</p>
+                </button>
+                
+                <button onclick="sendPromise()" class="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 border-2 border-transparent hover:border-purple-200">
+                    <div class="text-4xl mb-3 group-hover:scale-125 transition">🤝</div>
+                    <h3 class="font-semibold text-gray-800">Promesa</h3>
+                    <p class="text-sm text-gray-500 mt-2">Un compromiso para el futuro</p>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-white/90 backdrop-blur-md py-8 text-center text-gray-600">
+        <div class="flex items-center justify-center gap-2 mb-4">
+            <span>Hecho con</span>
+            <i data-lucide="heart" class="text-red-500 fill-red-500 animate-pulse w-4 h-4"></i>
+            <span>para ti</span>
+        </div>
+        <p class="text-sm">Aunque estemos lejos, siempre estás en mi corazón</p>
+    </footer>
+
+    
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-white px-6 py-3 rounded-full shadow-2xl border-2 border-red-200 flex items-center gap-3 transition-all duration-300 translate-y-20 opacity-0 z-50">
+        <i data-lucide="heart" class="text-red-500 fill-red-500 animate-pulse"></i>
+        <span id="toast-message" class="text-gray-700 font-medium">¡Mensaje enviado con amor!</span>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <audio id="loveSong">
+  <source src="Joan Sebastian - Vestido de Besos (VIDEO OFICIAL).mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
